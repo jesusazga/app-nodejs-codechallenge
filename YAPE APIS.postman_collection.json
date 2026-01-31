@@ -1,0 +1,78 @@
+{
+  "info": {
+    "_postman_id": "72db7339-7f08-4b43-aa6a-05ca46018afd",
+    "name": "YAPE APIS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "6162721"
+  },
+  "item": [
+    {
+      "name": "http://localhost:8081/transactions APPROVED",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"accountExternalIdDebit\": \"7f3a9c2e-4d6b-4a77-9c2a-1e3f6c8a4b91\",\r\n    \"accountExternalIdCredit\": \"c1b47e55-8a92-4e0a-9f8d-6d3f2b1a0c74\",\r\n    \"transferTypeId\": 1,\r\n    \"value\": 500\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/transactions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "transactions"
+          ]
+        },
+        "description": "Generated from cURL: curl -i -X POST http://localhost:8081/transactions \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"accountExternalIdDebit\": \"11111111-1111-1111-1111-111111111111\",\r\n    \"accountExternalIdCredit\": \"22222222-2222-2222-2222-222222222222\",\r\n    \"transferTypeId\": 1,\r\n    \"value\": 500\r\n  }'"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8081/transactions REJECTED",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"accountExternalIdDebit\": \"4b2a8f9c-1d34-4e6f-9c7a-5b8e2f1a0d63\",\r\n    \"accountExternalIdCredit\": \"e7c4b2a1-6f9d-4a3e-8b5c-0d1f2a9e6c84\",\r\n    \"transferTypeId\": 1,\r\n    \"value\": 1500\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/transactions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "transactions"
+          ]
+        },
+        "description": "Generated from cURL: curl -i -X POST http://localhost:8081/transactions \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"accountExternalIdDebit\": \"11111111-1111-1111-1111-111111111111\",\r\n    \"accountExternalIdCredit\": \"22222222-2222-2222-2222-222222222222\",\r\n    \"transferTypeId\": 1,\r\n    \"value\": 1500\r\n  }'\r\n"
+      },
+      "response": []
+    }
+  ]
+}
